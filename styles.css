@@ -7,6 +7,7 @@
     color: #243e63
 }
 
+
 html {
     scroll-behavior: smooth;
 }
@@ -58,6 +59,7 @@ button {
     color: #7342d6;
     display: none;
 }
+
 
 .menu__backdrop {
     position: absolute;
@@ -129,6 +131,7 @@ button {
 .nav__row {
     display: flex;
     justify-content: space-between;
+
     
 }
 
@@ -439,6 +442,7 @@ section {
     color: white;
 }
 
+
 .quality__img--wrapper {
     border-radius: 4px;
     border: 1px solid rgb(229, 231, 235);
@@ -449,9 +453,31 @@ section {
 }
 
 .quality__img {
-    z-index: index 1;
     width: 100%;
+    z-index: 2;
 
+}
+
+.quality__grid {
+    transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1);
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    fill: rgb(100, 21, 255);
+    --tw-text-opacity: 1;
+    color: rgba(100, 21, 255, var(--tw-text-opacity));
+    z-index: 0;
+    display: block;
+}
+
+g[Attributes Style] {
+    fill: rgba(100, 21, 255, 0.15);
+}
+
+use[Attributes Style] {
+    transform: translate(0, 0);
 }
 
 /* STEPS */
@@ -473,6 +499,27 @@ section {
 }
 .steps__img {
     width: 100%;
+}
+
+.steps__grid {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 10rem;
+    opacity: 0.2;
+    z-index: -10;
+    color: rgb(100, 21, 255);
+    fill: currentColor;
+}
+
+g[Attributes Style] {
+    fill: rgba(100, 21, 255, 0.15);
+}
+
+:not(svg) {
+    transform-origin: 0px 0px;
 }
 
 .steps__description {
@@ -927,6 +974,33 @@ svg:not(:root) {
 }
 
 /* START*/
+
+#start .row {
+    position: relative;
+    overflow: hidden;
+}
+
+.start__blob--1 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 20rem;
+    width: 20rem;
+    transform: translate(-5rem, 8rem);
+    color: rgb(80 17 204);
+    opacity: 0.1;
+}
+
+.start__blob--2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 20rem;
+    width: 20rem;
+    transform: translate(5rem, -16rem);
+    color: rgb(80 17 204);
+    opacity: 0.1;
+}
 
 .start__container {
     padding: 96px 0;
@@ -1624,3 +1698,10 @@ SMALL PHONES, TABLETS, LARGE SMARTPHONES
     }
 }
 
+@media (max-width: 1280px) {
+    .steps__grid {
+        height: 5rem;
+        width: 5rem;
+        bottom: -50px;
+    }
+}
